@@ -75,3 +75,7 @@ print('\n')
 for i in range(0, len(Passenger.passenger_list)):
     obj = vars(Passenger.passenger_list[i])
     print(obj)
+
+obj = vars(Flight.flight_list[0])
+passengerzzz = (obj['boarding_list'])
+print(vars(passengerzzz[1]))
