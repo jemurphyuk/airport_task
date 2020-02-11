@@ -21,9 +21,10 @@ passenger5 = Passenger('Clyde', 'NO', 'M', 1845)
 passenger6 = Passenger('Butters', 'NW', 'M', 4572)
 
 # initialise 3 planes
-# plane1 = Plane(200, 300, 700, 132, 'Boeing', '747', 111, 4, 600)
-# plane2 = Plane(150, 300, 750, 111, 'Boeing', '737', 92, 2, 400)
-# plane3 = Plane(400, 300, 650, 160, 'Airbus', 'A380', 130, 6, 800)
+plane1 = Plane(200, 300, 700, 132, 'Boeing', '747', 111, 4, 600)
+plane2 = Plane(150, 300, 750, 111, 'Boeing', '737', 92, 2, 400)
+plane3 = Plane(400, 300, 650, 160, 'Airbus', 'A380', 130, 6, 800)
+
 # initialise 3 flights
 flight1 = Flight('Emirates', 'Dubai', 'LHR', '20/01/2020')
 flight2 = Flight('British Airways', 'LGW', 'JFK', '22/01/2020')
