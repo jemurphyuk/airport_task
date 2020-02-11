@@ -39,16 +39,16 @@ flight3 = Flight('EasyJet', 'LTN', 'CDG', '24/01/2020')
 
 #flight_atlanta =
 # add 2 passengers to each flight
-flight1.add_passenger_boarder(passenger1)
-flight1.add_passenger_boarder(passenger2)
-flight2.add_passenger_boarder(passenger3)
-flight2.add_passenger_boarder(passenger4)
-flight3.add_passenger_boarder(passenger5)
-flight3.add_passenger_boarder(passenger6)
+flight1.add_passenger_boarder([passenger1, passenger2])
+# flight1.add_passenger_boarder(passenger2)
+flight2.add_passenger_boarder([passenger3, passenger4])
+# flight2.add_passenger_boarder(passenger4)
+flight3.add_passenger_boarder([passenger5, passenger6])
+# flight3.add_passenger_boarder(passenger6)
 
-Flight.add_flight_to_flight_list(flight1)
-Flight.add_flight_to_flight_list(flight2)
-Flight.add_flight_to_flight_list(flight3) # = [flight1, flight2, flight3]
+# Flight.add_flight_to_flight_list(flight1)
+# Flight.add_flight_to_flight_list(flight2)
+# Flight.add_flight_to_flight_list(flight3) # = [flight1, flight2, flight3]
 
 for flight in Flight.flight_list:
     print(f"Flight ID: {vars(flight)['flight_id']}")
@@ -58,9 +58,20 @@ for flight in Flight.flight_list:
     print('\n')
 
 
+for i in range(0, len(Flight.flight_list)):
+    obj = vars(Flight.flight_list[i])
+    print(obj)
+# obj2 = obj['boarding_list']
+# # print(vars(obj2))
+# print(obj)
+print('\n')
 # print(vars(passenger1))
 # #flight_atlanta.add_passenger(passenger1)
 # # list passengers in one flight
 # print(vars(flight1))
 # print(vars(flight2))
 # print(vars(flight3))
+
+for i in range(0, len(Passenger.passenger_list)):
+    obj = vars(Passenger.passenger_list[i])
+    print(obj)
