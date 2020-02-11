@@ -1,8 +1,10 @@
 from people import People
 
+
 class Passenger(People):
-    __booking_variable = 10000
     passenger_list = []
+    __booking_variable = 10000
+
     def __init__(self, name, postcode, gender, passport):
         super().__init__(name, postcode, gender)
         self.__passport = passport
@@ -12,9 +14,9 @@ class Passenger(People):
     def get_passport(self):
         return self.__passport
 
-    def add_passenger(self, passenger):
-        return self.passenger_list.append(passenger)
+    def add_passenger(self):
+        return Passenger.passenger_list.append(self)
 
-    def print_flight_list(self):
-        return self.passenger_list
+    # def print_flight_list():
+        # return Passenger.passenger_list
     # __passport

@@ -1,10 +1,11 @@
 # import all classes
-#from people import *
+# from people import *
+# from buildings import *
+# from aircraft import *
 from passengers import Passenger
-#from buildings import *
-#from aircraft import *
 from plane import Plane
 from flight import Flight
+
 # identify dependencies
 
 # start empty list of what I want to track
@@ -19,6 +20,12 @@ passenger3 = Passenger('Kyle', 'CV', 'M', 2457)
 passenger4 = Passenger('Eric', 'CM', 'M', 9452)
 passenger5 = Passenger('Clyde', 'NO', 'M', 1845)
 passenger6 = Passenger('Butters', 'NW', 'M', 4572)
+
+
+# add_passenger(passenger1)
+
+# print(vars(Passenger.print_flight_list))
+
 
 # initialise 3 planes
 plane1 = Plane(200, 300, 700, 132, 'Boeing', '747', 111, 4, 600)
@@ -39,12 +46,16 @@ flight2.add_passenger_boarder(passenger4)
 flight3.add_passenger_boarder(passenger5)
 flight3.add_passenger_boarder(passenger6)
 
-flight_list = [flight1, flight2, flight3]
+Flight.add_flight_to_flight_list(flight1)
+Flight.add_flight_to_flight_list(flight2)
+Flight.add_flight_to_flight_list(flight3) # = [flight1, flight2, flight3]
 
-for flight in flight_list:
-    print(vars(flight)['flight_id'])
+for flight in Flight.flight_list:
+    print(f"Flight ID: {vars(flight)['flight_id']}")
+    print(f"Airline: {vars(flight)['airline']}")
     for passenger in Flight.show_boarding_list(flight):
         print(passenger.flight_id, passenger.name, passenger.get_passport())
+    print('\n')
 
 
 # print(vars(passenger1))

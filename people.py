@@ -5,5 +5,5 @@ class People:
         self.postcode = postcode
         self.gender = gender
 
-    #def
+    # def
     #

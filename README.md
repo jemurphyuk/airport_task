@@ -6,3 +6,7 @@ USER STORIES
 - as a check in assistant I want to be able to add a passenger to a flight
     - a passenger is successfully added to the flight
 - as a steward I want a list of all passengers on a flight 
+
+questions for filipe
+- better way to extract data other than vars()
+- can we add multiple variables to same 'append' function
