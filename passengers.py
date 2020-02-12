@@ -8,7 +8,7 @@ class Passenger(People):
     def __init__(self, name, postcode, gender, passport):
         super().__init__(name, postcode, gender)
         self.__passport = passport
-        self.flight_id = Passenger.__booking_variable
+        self.board_id = Passenger.__booking_variable
         Passenger.__booking_variable += 1
         Passenger.__append_passenger_to_list(self)
 

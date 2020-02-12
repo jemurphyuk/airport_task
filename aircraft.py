@@ -11,4 +11,5 @@ class Aircraft:
 
     def add_to_aircraft_list(self):
         return Aircraft.aircraft_inventory.append(self)
-    #
+
+

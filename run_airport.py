@@ -37,24 +37,16 @@ flight1 = Flight('Emirates', 'Dubai', 'LHR', '20/01/2020')
 flight2 = Flight('British Airways', 'LGW', 'JFK', '22/01/2020')
 flight3 = Flight('EasyJet', 'LTN', 'CDG', '24/01/2020')
 
-#flight_atlanta =
 # add 2 passengers to each flight
 flight1.add_passenger_boarder([passenger1, passenger2])
-# flight1.add_passenger_boarder(passenger2)
 flight2.add_passenger_boarder([passenger3, passenger4])
-# flight2.add_passenger_boarder(passenger4)
 flight3.add_passenger_boarder([passenger5, passenger6])
-# flight3.add_passenger_boarder(passenger6)
-
-# Flight.add_flight_to_flight_list(flight1)
-# Flight.add_flight_to_flight_list(flight2)
-# Flight.add_flight_to_flight_list(flight3) # = [flight1, flight2, flight3]
 
 for flight in Flight.flight_list:
     print(f"Flight ID: {vars(flight)['flight_id']}")
     print(f"Airline: {vars(flight)['airline']}")
     for passenger in Flight.show_boarding_list(flight):
-        print(passenger.flight_id, passenger.name, passenger.get_passport())
+        print(passenger.board_id, passenger.name, passenger.get_passport())
     print('\n')
 
 
